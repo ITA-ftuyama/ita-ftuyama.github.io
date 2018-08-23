@@ -28,31 +28,35 @@
       <div class="col-md-3">
         <div class="form-group">
           <label>IMC</label>
-          <input class="form-control" type="number" step="0.1" placeholder="25.6"/>
+          <input id='imc' class="form-control" type="number" step="0.1" placeholder="25.6"/>
         </div>
       </div>
       <div class="col-md-3">
         <div class="form-group">
           <label>Peso Min</label>
-          <input class="form-control" type="number" placeholder="60"/>
+          <input id='pmin' class="form-control" type="number" placeholder="60"/>
         </div>
         <div class="form-group">
           <label>Peso Max</label>
-          <input class="form-control" type="number" placeholder="65"/>
+          <input id='pmax' class="form-control" type="number" placeholder="65"/>
         </div>
       </div>
       <div class="col-md-3">
         <div class="form-group">
           <label>Altura Min</label>
-          <input class="form-control" type="number" step="0.01" placeholder="1.70"/>
+          <input id='hmin' class="form-control" type="number" step="0.01" placeholder="1.70"/>
         </div>
         <div class="form-group">
           <label>Altura Max</label>
-          <input class="form-control" type="number" step="0.01" placeholder="1.75"/>
+          <input id='hmax' class="form-control" type="number" step="0.01" placeholder="1.75"/>
         </div>
       </div>
       <div class="col-md-3">
-        <button class="btn btn-info">Calcular</button>
+        <div class="form-group">
+          <label>Margem de erro</label>
+          <input id='error' class="form-control" type="number" step="0.01" placeholder="0.1"/>
+        </div>
+        <button class="btn btn-info btn-block">Calcular</button>
       </div>
     </div>
   </form>
