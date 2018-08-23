@@ -85,10 +85,10 @@ $('form').on('submit', function() {
       calc_imc = p  * 1.0 / (h * h);
       if (Math.abs(calc_imc - imc) <= error) {
         answers.push(
-          "<ul><li>IMC: " + calc_imc.toFixed(2) + 
-          "</li><li>Peso: " + p + 
-          "</li><li>Altura: " + h +
-          "</li></ul><br/>"
+          "<ul class="list-group"><li class="list-group-item>IMC: " + calc_imc.toFixed(2) + 
+          "</li><li class="list-group-item>Peso: " + p + 
+          "</li><li class="list-group-item>Altura: " + h +
+          "</li></ul>"
         );
       }
     }
