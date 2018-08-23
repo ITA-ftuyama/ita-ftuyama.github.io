@@ -84,11 +84,11 @@ $('form').on('submit', function() {
     for(var h = hmin; h <= hmax; h = h + 0.1) {
       calc_imc = p / (h * h);
       if (Math.abs(calc_imc - imc) <= error) {
-        answers.append(
-          "<li><ul>IMC: " + calc_imc + 
-          "</ul><ul>Peso: " + p + 
-          "</ul><ul>Altura: " + h +
-          "</ul></li><br/>"
+        answers.push(
+          "<ul><li>IMC: " + calc_imc + 
+          "</li><li>Peso: " + p + 
+          "</li><li>Altura: " + h +
+          "</li></ul><br/>"
         );
       }
     }
