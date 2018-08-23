@@ -82,7 +82,7 @@ $('form').on('submit', function() {
   
   for(var p = pmin; p <= pmax; p = p + 1) {
     for(var h = hmin; h <= hmax; h = h + 0.1) {
-      calc_imc = p / (h * h);
+      calc_imc = p  * 1.0 / (h * h);
       if (Math.abs(calc_imc - imc) <= error) {
         answers.push(
           "<ul><li>IMC: " + calc_imc + 
