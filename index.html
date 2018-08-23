@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Calculadora IMC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
   
 
@@ -60,7 +61,40 @@
       </div>
     </div>
   </form>
+  </hr>
+  <div id="result></div>
 </div>
 
 </body>
+           
+<script>
+$('form').on('submit', function() {
+  var imc = $("#imc").val();
+  var pmin = $("#pmin").val();
+  var pmax = $("#pmax").val();
+  var hmin = $("#hmin").val();
+  var hmax = $("#hmax").val();
+  var error = $("#error").val();
+  
+  var calc_imc;
+  
+  answers = [];
+  
+  for(var p = pmin; p <= pmax; p = p + 1) {
+    for(var h = hmin; h <= hmax; h = h + 0.1) {
+      calc_imc = p / (h * h);
+      if (Math.abs(calc_imc - imc) <= error) {
+        answers.append(
+          "<li><ul>IMC: " + calc_imc + 
+          "</ul><ul>Peso: " + p + 
+          "</ul><ul>Altura: " + h +
+          "</ul></li><br/>"
+        );
+      }
+    }
+  }
+  
+  $("#result").html("<h4>Respostas</h4>" + answers);
+});
+</script>
 </html>
