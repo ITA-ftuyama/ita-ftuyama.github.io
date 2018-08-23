@@ -69,13 +69,13 @@
            
 <script>
 $('form').on('submit', function() {
-  var imc = $("#imc").val();
-  var pmin = $("#pmin").val();
-  var pmax = $("#pmax").val();
-  var hmin = $("#hmin").val();
-  var hmax = $("#hmax").val();
-  var error = $("#error").val();
-  
+  var imc = parseFloat($("#imc").val());
+  var pmin = parseFloat($("#pmin").val());
+  var pmax = parseFloat($("#pmax").val());
+  var hmin = parseFloat($("#hmin").val());
+  var hmax = parseFloat($("#hmax").val());
+  var error = parseFloat($("#error").val());
+
   var calc_imc;
   
   answers = [];
